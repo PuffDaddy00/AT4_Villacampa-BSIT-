@@ -19,7 +19,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
+// Variables for user credentials and file path
 public class Update extends javax.swing.JFrame {
     private static String usname, pass, type = "admin";
 
@@ -157,7 +157,7 @@ public class Update extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+// Method to handle the Update button click event
     private void UpdatebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdatebuttonActionPerformed
         // TODO add your handling code here:
  try {
@@ -199,7 +199,7 @@ public class Update extends javax.swing.JFrame {
     }
 
     }//GEN-LAST:event_UpdatebuttonActionPerformed
-
+ // Method to clear input fields when Clear button is clickedv
     private void ClearbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearbuttonActionPerformed
         // TODO add your handling code here:
         Cusernamefield.setText("");
@@ -207,7 +207,7 @@ public class Update extends javax.swing.JFrame {
         Npasswordfield.setText("");
         Nuserfeild.setText("");  
     }//GEN-LAST:event_ClearbuttonActionPerformed
-
+// Method to go back to the Dashboard when Back button is clicke
     private void BackbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbuttonActionPerformed
             // TODO add your handling code here:
         this.dispose();
@@ -265,7 +265,7 @@ public class Update extends javax.swing.JFrame {
             }
         });
     }
-public void filecheck() throws FileNotFoundException, IOException, ParseException {
+public void filecheck() throws FileNotFoundException, IOException, ParseException { // Reads the JSON file and loads user data into the userlist array.
     FileReader reader = new FileReader(filepath);
 
     if (reader.ready()) {

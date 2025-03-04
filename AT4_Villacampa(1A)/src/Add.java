@@ -7,6 +7,7 @@
  *
  * @author Admin
  */
+// Import necessary libraries for file handling, JSON processing, and GUI components
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -20,12 +21,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+
 public class Add extends javax.swing.JFrame {
    
     //varieable to store user crentials
    private static String adname, adpass, type = "member", types;
 
-   //file patch
+    // File path for storing user data known as jsonfile
    private static String filepath2 = "C:\\Users\\Admin\\Documents\\NetBeansProjects\\AT4_Villacampa(1A)\\src\\data.json";
    private static JSONParser jsonParser2 = new JSONParser();
    private static JSONObject record = new JSONObject();
@@ -37,7 +39,7 @@ public class Add extends javax.swing.JFrame {
      * Creates new form Add
      */
     public Add() {
-        initComponents();
+        initComponents(); // Initialize UI components
     }
 
     /**
@@ -148,7 +150,8 @@ public class Add extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+      
+      // to addbutton
     private void addbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbuttonActionPerformed
         // TODO add your handling code here:
           try {
@@ -177,19 +180,22 @@ public class Add extends javax.swing.JFrame {
         r.setVisible(true);
     }//GEN-LAST:event_addbuttonActionPerformed
 
+   // go to dashboard
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     Dashboard dashboard = new Dashboard();
     dashboard.setVisible(true);
     this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
+   
+   //clear button
     private void clearbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbuttonActionPerformed
         // TODO add your handling code here:
         Userfield.setText("");
         Passwordfield.setText("");
     }//GEN-LAST:event_clearbuttonActionPerformed
 
+   //password field so you can type
     private void PasswordfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordfieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordfieldActionPerformed
@@ -228,7 +234,7 @@ public class Add extends javax.swing.JFrame {
             }
         });
     }
-    public static void filecheck() throws FileNotFoundException, IOException, ParseException {
+    public static void filecheck() throws FileNotFoundException, IOException, ParseException { // make code check 
         FileReader reader = new FileReader(filepath2);
 
         if (reader.ready()) {

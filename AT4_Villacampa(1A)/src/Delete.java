@@ -121,6 +121,7 @@ public class Delete extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+// Redirects back to the Dashboard
     private void BackbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbuttonActionPerformed
         // TODO add your handling code here:
         this.dispose();
@@ -128,6 +129,7 @@ public class Delete extends javax.swing.JFrame {
         e.setVisible(true);
     }//GEN-LAST:event_BackbuttonActionPerformed
 
+// Handles the action when the Delete button is clicked
     private void DeletebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeletebuttonActionPerformed
         // TODO add your handling code here:
            try {
@@ -188,6 +190,7 @@ public class Delete extends javax.swing.JFrame {
     e.setVisible(true);
     }//GEN-LAST:event_DeletebuttonActionPerformed
 
+// Clears the text fields when the Clear button is clicked
     private void clearbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbuttonActionPerformed
         // TODO add your handling code here:
         userfeild.setText("");
@@ -228,6 +231,7 @@ public class Delete extends javax.swing.JFrame {
             }
         });
     }
+// Ensures the file is checked and loaded before performing deletion
      public void filecheck() throws FileNotFoundException, IOException, ParseException {
         FileReader reader = new FileReader(filepath);
 

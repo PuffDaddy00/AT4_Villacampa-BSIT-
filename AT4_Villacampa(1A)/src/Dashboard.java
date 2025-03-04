@@ -7,6 +7,7 @@
  *
  * @author Admin
  */
+// Import required libraries
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -21,8 +22,10 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 public class Dashboard extends javax.swing.JFrame {
 
+    // Variables to store user details
     private static String adname, adpass, type = "member", types;
 
+    // make it json file
     private static String filepath2 = "C:\\Users\\Admin\\Documents\\NetBeansProjects\\AT4_Villacampa(1A)\\src\\data.json";
     private static JSONParser jsonParser2 = new JSONParser();
     private static JSONObject record = new JSONObject();
@@ -98,12 +101,14 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //logout button
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
         this.dispose();
         new Loginwindow().setVisible(true);
     }//GEN-LAST:event_logoutActionPerformed
 
+    //add button
     private void AddstudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddstudentActionPerformed
         // TODO add your handling code here:
     Add z = new Add();
@@ -111,6 +116,7 @@ public class Dashboard extends javax.swing.JFrame {
     this.dispose();
     }//GEN-LAST:event_AddstudentActionPerformed
 
+    //update button
     private void updatestudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatestudentActionPerformed
         // TODO add your handling code here:
         Update y = new Update();
@@ -119,6 +125,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_updatestudentActionPerformed
 
+    //delete button
     private void deletestuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletestuActionPerformed
         // TODO add your handling code here:
         Delete a = new Delete();

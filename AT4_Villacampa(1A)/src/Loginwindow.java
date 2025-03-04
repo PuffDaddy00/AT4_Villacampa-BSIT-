@@ -19,7 +19,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import javax.swing.JOptionPane;
 
-
+    // Variables to store user credentials and user type
 public class Loginwindow extends javax.swing.JFrame {
     
     private static String usname, pass, type = "admin";
@@ -119,13 +119,14 @@ public class Loginwindow extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+        //Clears the username and password fields when "Clear" button is clicked
     private void bclear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bclear1ActionPerformed
         // TODO add your handling code here:
         jtuser1.setText("");
         jPassword.setText("");
     }//GEN-LAST:event_bclear1ActionPerformed
-
+     //Handles login button click event
     private void blogin1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
          try {
@@ -205,7 +206,7 @@ public class Loginwindow extends javax.swing.JFrame {
             }
         });
     }
-     public static void filecheck() throws FileNotFoundException,IOException, ParseException{
+     public static void filecheck() throws FileNotFoundException,IOException, ParseException{ // Reads the JSON file and loads user credentials
         FileReader reader = new FileReader(filepath);
         
         if(reader.ready())
